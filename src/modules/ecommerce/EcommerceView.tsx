@@ -15,6 +15,7 @@ import Api from "../../API/server-api";
 import ProductDialog from "../../shared/dialogs/ProductDialog";
 import ProductsCard from "./components/ProductsCard";
 import SearchIcon from "@mui/icons-material/Search";
+import SearchHistory from "./components/SearchHistory";
 
 interface IEcommerceViewProps {}
 
@@ -151,6 +152,9 @@ const EcommerceView: React.FC<IEcommerceViewProps> = () => {
           )}
         </Box>
         {content}
+        <Box>
+          <SearchHistory />
+        </Box>
       </Container>
       <ProductDialog
         product={selectedProduct}

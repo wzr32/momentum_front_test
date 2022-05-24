@@ -71,6 +71,12 @@ const Login: React.FC<ILoginProps> = () => {
         Login
       </Typography>
       <NotificationComponent notification={notification} />
+      <Typography variant="caption" align="center" component="p">
+        admin access
+      </Typography>
+      <Typography variant="caption" align="center" component="p">
+        <i>username: "admin", password: "1234"</i>
+      </Typography>
       <Box>
         <TextField
           fullWidth

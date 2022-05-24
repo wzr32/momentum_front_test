@@ -9,7 +9,10 @@ export const createHistoryStorage = () => {
 export const recentViews = async (item?: ProductType) => {
   if (localStorage.getItem("history")) {
     const history = JSON.parse(localStorage.getItem("history") || "[]");
-    await history.push(item);
-    localStorage.setItem("history", JSON.stringify(history));
+
+    if (!history.filter((prod: ProductType) => prod.id === item?.id).length) {
+      await history.push(item);
+      localStorage.setItem("history", JSON.stringify(history));
+    }
   }
 };
